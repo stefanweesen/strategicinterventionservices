@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Strategic Intervention Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url(assets_images/capabilities-background.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(30, 30, 30, 0.9);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-content {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: #00ffff;
+        }
+
+        .hero {
+            width: 100%;
+            background: url(assets_images/about-hero-background.jpg) no-repeat center center fixed;
+            background-size: cover;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(40, 40, 40, 0.9);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #00ffff;
+            color: #121212;
+            border: none;
+            padding: 12px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #00cccc;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: rgba(40, 40, 40, 0.9);
+            padding: 30px;
+            border-radius: 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(50, 50, 50, 0.9);
+            border: 1px solid #444;
+            padding: 25px;
+            border-radius: 0;
+            transition: transform 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffff;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .principles-list {
+            margin-top: 20px;
+        }
+
+        .principles-list div {
+            margin-bottom: 15px;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .principles-list h4 {
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #bbb;
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                padding: 10px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 0.8rem;
+            }
+
+            .logo {
+                height: 60px;
+                margin-bottom: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets_images/sis-logo.png" alt="Strategic Intervention Services Logo" class="logo">
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="shop.html">SHOP</a>
+                <a href="consultancy.html">CONSULTANCY</a>
+                <a href="training.html">TRAINING</a>
+                <a href="high-stakes-operations.html">HIGH-STAKES OPERATIONS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Our Organization</h1>
+            <p>Learn more about Strategic Intervention Services and our commitment to providing specialized drone solutions for defense and security sectors.</p>
+            <a href="contact.html" class="button">GET IN TOUCH</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="company-overview">
+            <h2>About Strategic Intervention Services</h2>
+            <p>Strategic Intervention Services (SIS) is a specialized company that delivers drone solutions and associated services for defense, security, and tactical applications. Founded by experienced professionals with a background in military operations and strategic planning, we focus on providing high-quality, practical solutions for complex security challenges. Our headquarters is based in Georgia, with an international focus.</p>
+        </section>
+
+        <section class="who-we-are">
+            <h2>Who We Are</h2>
+            <p>SIS was founded by SS and SP, two experts with a shared vision on transforming the deployment of drones and anti-drone systems in modern security operations. SS serves as the operational and strategic leader, while Nils is responsible for technical innovation and training. Together, we combine military precision with commercial efficiency to provide clients with solutions that are directly deployable in the field.</p>
+            <p>Our team consists of experienced professionals with backgrounds in defense, mission planning, and drone technology. We operate according to a structured approach, based on military principles and adapted for commercial applications.</p>
+        </section>
+
+        <section class="mission">
+            <h2>Our Mission</h2>
+            <p>Our mission is to equip defense and security organizations with the best drone solutions and services, so they can execute their missions safely, efficiently, and effectively. We strive to set the standard for tactical drone deployment through innovation, reliability, and customization.</p>
+            <p>We believe in delivering more than just products. Our focus is on providing complete solutions, including consultancy, training, and continuous support, to ensure our clients are always optimally prepared.</p>
+        </section>
+
+        <section class="methodology">
+            <h2>Our Methodology</h2>
+            <p>Our methodology is based on a five-phase mission planning model, combined with six core principles derived from special forces operations:</p>
+
+            <div class="principles-list">
+                <div>
+                    <h4>Strategic Planning</h4>
+                    <p>Clearly define objectives and requirements.</p>
+                </div>
+                <div>
+                    <h4>Preparation</h4>
+                    <p>Prepare equipment, personnel, and logistics.</p>
+                </div>
+                <div>
+                    <h4>Execution</h4>
+                    <p>Execute the mission with real-time monitoring and adjustments.</p>
+                </div>
+                <div>
+                    <h4>Exfiltration</h4>
+                    <p>Safe withdrawal and immediate evaluation.</p>
+                </div>
+                <div>
+                    <h4>Demobilization</h4>
+                    <p>Finalize and analyze results.</p>
+                </div>
+            </div>
+
+            <p>The six principles guiding our operations are:</p>
+
+            <div class="principles-list">
+                <div>
+                    <h4>Purpose</h4>
+                    <p>Clear objectives.</p>
+                </div>
+                <div>
+                    <h4>Simplicity</h4>
+                    <p>Simple, clear plans.</p>
+                </div>
+                <div>
+                    <h4>Speed</h4>
+                    <p>Fast and decisive actions.</p>
+                </div>
+                <div>
+                    <h4>Security</h4>
+                    <p>Protection of personnel and resources.</p>
+                </div>
+                <div>
+                    <h4>Repetition</h4>
+                    <p>Repetition of successful methods.</p>
+                </div>
+                <div>
+                    <h4>Surprise</h4>
+                    <p>Tactical advantage through unpredictability.</p>
+                </div>
+            </div>
+
+            <p>These principles ensure that every solution we provide is both effective and adaptive.</p>
+        </section>
+
+        <section class="what-we-do">
+            <h2>What We Do</h2>
+            <p>We offer a wide range of services and products, including:</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Drone Sales</h3>
+                    <p>Specialized drones and anti-drone systems for reconnaissance, surveillance, and threat detection.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Consultancy</h3>
+                    <p>Tailored advice for drone selection, mission planning, and system integration.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Training</h3>
+                    <p>Specialized training for drone operators, from basic skills to advanced tactics.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Combat Monitoring</h3>
+                    <p>Real-time support and data analysis during operations.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Mission Planning</h3>
+                    <p>Strategic planning and risk analysis for complex missions.</p>
+                </div>
+            </div>
+
+            <p>Our solutions are designed for the mid-range market, where we offer high-quality technologies at competitive rates.</p>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Choose Us</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Experience</h3>
+                    <p>Our team has years of experience in defense and drone warfare.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Customization</h3>
+                    <p>Every solution is tailored to the specific needs of the client.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Reliability</h3>
+                    <p>We deliver only the highest quality products and services.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Support</h3>
+                    <p>We provide continuous support, from consultancy to mission execution.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Get in Touch</h2>
+            <p>For more information about our services or to schedule an appointment, please contact us. We are ready to answer your questions and help you find the best solution for your mission.</p>
+            <a href="contact.html" class="button">CONTACT US</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>STRATEGIC INTERVENTION SERVICES. ALL RIGHTS RESERVED. 2026.</p>
+    </footer>
+</body>
+</html>

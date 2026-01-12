@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultancy - Strategic Intervention Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght=400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url(assets_images/capabilities-background.jpg) no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            width: 100%;
+            height: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(30, 30, 30, 0.9);
+            position: relative;
+            z-index: 100;
+        }
+
+        .header-content {
+            width: 100%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: color 0.3s;
+            padding: 5px 10px;
+        }
+
+        nav a:hover {
+            color: #00ffff;
+        }
+
+        .hero {
+            width: 100%;
+            background: url(assets_images/consultancy-hero-background.jpg) no-repeat center center fixed;
+            background-size: cover;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 1200px;
+            width: 90%;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: rgba(40, 40, 40, 0.9);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 2.5rem;
+            color: #ffffff;
+            margin-bottom: 20px;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            color: #bbb;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button {
+            background-color: #00ffff;
+            color: #121212;
+            border: none;
+            padding: 12px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #00cccc;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: rgba(40, 40, 40, 0.9);
+            padding: 30px;
+            border-radius: 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(50, 50, 50, 0.9);
+            border: 1px solid #444;
+            padding: 25px;
+            border-radius: 0;
+            transition: transform 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffff;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        .service-card p {
+            margin-bottom: 20px;
+            color: #bbb;
+        }
+
+        .principles-list, .phases-list {
+            margin-top: 20px;
+        }
+
+        .principles-list div, .phases-list div {
+            margin-bottom: 15px;
+            color: #bbb;
+            line-height: 1.6;
+        }
+
+        .principles-list h4, .phases-list h4 {
+            color: #ffffff;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #bbb;
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                height: auto;
+                padding: 10px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 5px;
+                font-size: 0.8rem;
+            }
+
+            .logo {
+                height: 60px;
+                margin-bottom: 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets_images/sis-logo.png" alt="Strategic Intervention Services Logo" class="logo">
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="shop.html">SHOP</a>
+                <a href="consultancy.html">CONSULTANCY</a>
+                <a href="training.html">TRAINING</a>
+                <a href="high-stakes-operations.html">HIGH-STAKES OPERATIONS</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Consultancy for Drone Solutions and Mission Planning</h1>
+            <p>Strategic Intervention Services provides specialized consultancy to determine the best drone solutions and associated services for your defense and security needs. Our approach is built on listening, analyzing, and delivering tailored solutions that align with your operational objectives.</p>
+            <a href="contact.html" class="button">GET IN TOUCH</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="methodology">
+            <h2>How We Work</h2>
+            <p>Our consultancy process is designed to ensure that we fully understand your needs and deliver solutions that are both effective and aligned with your operational goals.</p>
+
+            <div class="phases-list">
+                <div>
+                    <h4>Listening</h4>
+                    <p>Every engagement begins with a thorough discussion to understand your mission, operational environment, and specific requirements. We ask targeted questions to identify your needs, constraints, and objectives.</p>
+                </div>
+                <div>
+                    <h4>Analysis</h4>
+                    <p>Using the information gathered, we analyze your requirements against our five-phase mission planning model and six core principles. This allows us to determine the optimal drone solutions, training, and support services for your situation.</p>
+                </div>
+                <div>
+                    <h4>Recommendation</h4>
+                    <p>We present a clear, detailed plan that includes drone selection, mission planning, training needs, and any additional services such as combat monitoring or security integration.</p>
+                </div>
+                <div>
+                    <h4>Implementation</h4>
+                    <p>Once you approve the plan, we assist with procurement, training, and deployment to ensure seamless integration into your operations.</p>
+                </div>
+                <div>
+                    <h4>Support</h4>
+                    <p>We provide ongoing support, including real-time combat monitoring, data analysis, and adjustments to ensure mission success.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission-planning">
+            <h2>Mission Planning Framework</h2>
+            <p>Our mission planning process follows a structured five-phase model to ensure clarity, efficiency, and effectiveness:</p>
+
+            <div class="phases-list">
+                <div>
+                    <h4>Strategic Planning</h4>
+                    <p>Define the mission objectives, scope, and success criteria. Identify key stakeholders, resources, and constraints.</p>
+                </div>
+                <div>
+                    <h4>Preparation</h4>
+                    <p>Prepare equipment, personnel, and logistics. Develop contingency plans and ensure all systems are operational and tested.</p>
+                </div>
+                <div>
+                    <h4>Execution</h4>
+                    <p>Deploy the drones and execute the mission according to the plan. Monitor progress in real-time and make adjustments as needed.</p>
+                </div>
+                <div>
+                    <h4>Exfiltration</h4>
+                    <p>Safely withdraw equipment and personnel. Conduct an initial debrief to capture immediate lessons learned.</p>
+                </div>
+                <div>
+                    <h4>Demobilization</h4>
+                    <p>Finalize the mission, analyze results, and document outcomes. Provide a comprehensive report and recommendations for future operations.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="principles">
+            <h2>Guiding Principles</h2>
+            <p>Our recommendations and operations are guided by six core principles to maximize effectiveness:</p>
+
+            <div class="principles-list">
+                <div>
+                    <h4>Purpose</h4>
+                    <p>Every mission must have a clear, measurable objective. We ensure that your goals are well-defined and aligned with your broader operational strategy.</p>
+                </div>
+                <div>
+                    <h4>Simplicity</h4>
+                    <p>Plans should be straightforward and easy to execute. Complexity increases the risk of errors and failures.</p>
+                </div>
+                <div>
+                    <h4>Speed</h4>
+                    <p>Rapid decision-making and execution are critical in dynamic environments. We emphasize quick, decisive actions to maintain the initiative.</p>
+                </div>
+                <div>
+                    <h4>Security</h4>
+                    <p>Protecting personnel, equipment, and information is paramount. We integrate security measures into every phase of the mission.</p>
+                </div>
+                <div>
+                    <h4>Repetition</h4>
+                    <p>Success comes from repeating proven methods and continuously refining them. We leverage best practices and lessons learned from previous missions.</p>
+                </div>
+                <div>
+                    <h4>Surprise</h4>
+                    <p>The element of surprise can provide a tactical advantage. We incorporate unpredictability into our plans where applicable.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <h2>Consultancy Services</h2>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Drone Selection and Procurement</h3>
+                    <p>We help you choose the right drones and anti-drone systems based on your mission requirements. Our expertise covers FPV drones, ISR drones, thermal imaging drones, and anti-drone technologies.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Mission Planning</h3>
+                    <p>We develop customized mission plans that include route planning, risk assessment, and contingency measures. Our plans are tailored to your specific operational environment.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Training</h3>
+                    <p>We provide specialized training programs to ensure your team can operate drones effectively. Training covers basic operation, advanced tactics, real-time data processing, and team coordination.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Combat Monitoring and Security</h3>
+                    <p>Our combat monitoring services provide real-time oversight, data analysis, and strategic adjustments during missions. We also offer security assessments to protect against threats.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Integration and Support</h3>
+                    <p>We assist with integrating drones into your existing systems and workflows. Our support continues throughout the mission lifecycle to address any challenges that arise.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="why-choose-us">
+            <h2>Why Work With Strategic Intervention Services</h2>
+            <p>Expertise: Our team has extensive experience in defense, drone warfare, and mission planning. We bring a unique combination of military precision and innovative thinking.</p>
+            <p>Tailored Solutions: We do not believe in one-size-fits-all answers. Every recommendation is customized to your specific needs and environment.</p>
+            <p>End-to-End Support: From initial consultation to mission completion, we provide comprehensive support to ensure your success.</p>
+            <p>Results-Driven: Our focus is on delivering measurable outcomes that enhance your operational capabilities.</p>
+        </section>
+
+        <section class="cta">
+            <h2>Schedule a Consultation</h2>
+            <p>Ready to discuss how our consultancy services can support your mission? Contact us to schedule an initial consultation.</p>
+            <a href="contact.html" class="button">CONTACT US</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>STRATEGIC INTERVENTION SERVICES. ALL RIGHTS RESERVED. 2026.</p>
+    </footer>
+</body>
+</html>

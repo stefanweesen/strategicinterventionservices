@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Strategic Intervention Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            color: #e0e0e0;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: url('assets_images/index_image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        header {
+            position: relative;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 2;
+            padding: 0 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: url('assets_images/index_image.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .header-content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgba(30, 30, 30, 0.8);
+        }
+
+        .logo {
+            height: 50px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav a {
+            color: #ffffff;
+            margin: 0 20px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00ffff;
+        }
+
+        .hero {
+            background: url('assets_images/index_image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            padding: 30px;
+        }
+
+        .hero-text-background {
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 30px;
+            border-radius: 5px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .button {
+            background-color: transparent;
+            color: #ffffff;
+            border: 2px solid #00ffff;
+            padding: 12px 30px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+
+        .button:hover {
+            background-color: #00ffff;
+            color: #121212;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        section {
+            margin-bottom: 40px;
+            background-color: rgba(30, 30, 30, 0.8);
+            padding: 30px;
+            border-radius: 0;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+            letter-spacing: 1px;
+        }
+
+        section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        section p {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: #bbb;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .service-card {
+            background-color: rgba(40, 40, 40, 0.8);
+            border: 1px solid #444;
+            padding: 25px;
+            border-radius: 0;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: #00ffff;
+        }
+
+        .service-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: #00ffff;
+        }
+
+        .service-card p {
+            margin-bottom: 15px;
+            color: #bbb;
+        }
+
+        .service-card ul {
+            margin: 15px 0;
+            padding-left: 20px;
+        }
+
+        .service-card li {
+            margin-bottom: 10px;
+            color: #bbb;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.9);
+            color: #bbb;
+            text-align: center;
+            padding: 30px 0;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                height: auto;
+                padding: 10px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            nav {
+                margin-top: 10px;
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            nav a {
+                margin: 0 5px;
+                font-size: 0.8rem;
+            }
+
+            .logo {
+                height: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets_images/sis-logo.png" alt="Strategic Intervention Services Logo" class="logo">
+            <nav>
+                <a href="index.html">HOME</a>
+                <a href="about.html">ABOUT</a>
+                <a href="services.html">SERVICES</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text-background">
+            <div class="hero-overlay">
+                <h2>OUR SERVICES</h2>
+                <p>Operator-led, deniable, and scalable solutions in modern and unconventional drone warfare.</p>
+                <a href="contact.html" class="button">CONSULT WITH US</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section class="introduction">
+            <h2>DENIABLE. SCALABLE. DECISIVE.</h2>
+            <p>
+                Strategic Intervention Services (SIS) provides operator-led, deniable, and scalable solutions in modern and unconventional drone warfare, mission execution, and small-unit training. Our services are tailored to meet the unique needs of governments, private military contractors, NGOs, and critical infrastructure operators facing asymmetric threats.
+            </p>
+        </section>
+
+        <section class="modern-drone-warfare">
+            <h3>MODERN/UNCONVENTIONAL DRONE WARFARE</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>FPV/ISR DRONE INTEGRATION</h4>
+                    <p>Precision strikes, real-time intelligence, surveillance, and reconnaissance (ISR) tailored to local threats and mission requirements.</p>
+                </div>
+                <div class="service-card">
+                    <h4>COUNTER-DRONE SOLUTIONS</h4>
+                    <p>Detection, disruption, and neutralization of hostile UAVs to protect assets and operations.</p>
+                </div>
+                <div class="service-card">
+                    <h4>ELECTRONIC WARFARE</h4>
+                    <p>Jamming and deception tactics to counter adversarial drone operations and ensure mission success.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="small-unit-training">
+            <h3>SMALL-UNIT TRAINING</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>DRONE-INFANTRY INTEGRATION</h4>
+                    <p>Customized training programs for seamless coordination between drones and ground units.</p>
+                </div>
+                <div class="service-card">
+                    <h4>TACTICAL PROFICIENCY</h4>
+                    <p>Modular training from basics to advanced tactics, including embedded mentoring during live operations.</p>
+                </div>
+                <div class="service-card">
+                    <h4>MISSION-SPECIFIC SOPS</h4>
+                    <p>Standardized operating procedures for consistency and effectiveness under pressure.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="high-stakes-operations">
+            <h3>HIGH-STAKES OPERATIONS</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h4>CLOSE PROTECTION</h4>
+                    <p>Drone-enabled situational awareness and threat mitigation for VIPs and high-value assets.</p>
+                </div>
+                <div class="service-card">
+                    <h4>SEARCH AND RESCUE (SAR)</h4>
+                    <p>Rapid deployment of drone and small-unit teams for extraction in hostile or hard-to-reach environments.</p>
+                </div>
+                <div class="service-card">
+                    <h4>HOSTAGE RESCUE</h4>
+                    <p>Precision planning and execution, minimizing risk and collateral damage.</p>
+                </div>
+                <div class="service-card">
+                    <h4>QUICK REACTION FORCE (QRF)</h4>
+                    <p>On-demand deployment for time-sensitive crises.</p>
+                </div>
+                <div class="service-card">
+                    <h4>HOTZONE EXTRACTION</h4>
+                    <p>Secure extraction of personnel from high-risk areas, leveraging local partnerships and deniable tactics.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="operational-framework">
+            <h2>OPERATIONAL FRAMEWORK</h2>
+            <p>
+                SIS employs a five-phase mission planning structure, ensuring clarity, adaptability, and results:
+            </p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <ul>
+                        <li><strong>Strategic Planning:</strong> Threat assessment, objective definition, and resource allocation.</li>
+                        <li><strong>Preparation and Rehearsal:</strong> Scenario-based training, logistical coordination, and equipment procurement.</li>
+                        <li><strong>Execution:</strong> Precision operations using drones, small units, and localized assets.</li>
+                        <li><strong>Demobilization:</strong> Secure extraction, evidence handling, and post-mission analysis.</li>
+                        <li><strong>Evaluation:</strong> Lessons learned, after-action reviews, and continuous improvement.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <p>Each phase is guided by six special forces principles: Purpose, Simplicity, Speed, Security, Repetition, and Surprise.</p>
+            <a href="contact.html" class="button">CONTACT US FOR A CUSTOM SOLUTION</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>STRATEGIC INTERVENTION SERVICES. ALL RIGHTS RESERVED. 2026.</p>
+    </footer>
+</body>
+</html>
